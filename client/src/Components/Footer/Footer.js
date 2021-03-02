@@ -6,12 +6,12 @@ function Footer() {
     return (
         <footer className="footerWrapper">
             <div className="footerContainer">
-                <div className="disclaimer">
-                    You need to allow access to video and audio to place calls.<br/>
-                    kalyan is fully Open Source and does not store any data on its servers.
+                <div className="disclaimer" style={{color: "white"}}>
+                    <br/>
+                    Ncrypto is fully Private and does not store any data on its servers.
                 </div>
-                <div className="self">
-                    Made with <span role='img' aria-label='heart-emoji'>❤️</span> in India by <a href="https://www.somikdatta.com" target="_blank" rel="noopener noreferrer">kalyan Somalaraju</a>
+                <div className="self" style={{color: "white"}}>
+                    Made for  Privacy by <a href="" target="_blank" rel="noopener noreferrer" style={{color: "indianred"}}>kalyan Somalaraju</a>
                 </div>
             </div>
         </footer>

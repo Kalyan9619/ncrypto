@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import Peer from "simple-peer";
 import Rodal from 'rodal'
 import {Howl} from 'howler'
-
+import tech from './Icons/techcrypt.jpg'
 import Navigation from './Components/Navigation/Navigation'
 import Footer from './Components/Footer/Footer'
 
@@ -53,31 +53,35 @@ function App() {
   let landingHTML=<>
     <Navigation/>
     <main>
+    
+      
+      
       <div className="u-margin-top-xxlarge u-margin-bottom-xxlarge">
     <div className="o-wrapper-l">
         <div className="hero flex flex-column">
             <div>
-                <div className="welcomeText">
-                    Anonymous Video Calls
+                <div className="welcomeText" style={{color: "turquoise"}}>
+                    Most Private 
                 </div>
-                <div className="descriptionText">
-                    across the world for free
+                <div className="descriptionText" style={{color: "turquoise"}}>
+                   Communication across the world 
                 </div>
             </div>
             <div>
-                <div className="actionText">Who do you want to call, <span className={copied?"username highlight copied":"username highlight"} onClick={()=>{showCopiedMessage()}}>{yourID}</span>?</div>
+                <div className="actionText" style={{color: "turquoise"}}>Secret Id <span className={copied?"username highlight copied":"username highligh"} onClick={()=>{showCopiedMessage()}} style={{color: "tomato"}}>{yourID}</span></div>
             </div>
-            <div className="callBox flex">
+            <div className="callBox flex" style={{color: "red"}}>
                 <input type="text" placeholder="Friend ID" value={receiverID} onChange={e => setReceiverID(e.target.value)} className="form-input"/>
-                <button onClick={() => callPeer(receiverID.toLowerCase().trim())} className="primaryButton">Call</button>
+                <button onClick={() => callPeer(receiverID.toLowerCase().trim())} className="primaryButton" style={{backgroundColor: "springgreen"}}>Call</button>
             </div>
-            <div>
-                To call your friend, ask them to open kalyan in their browser. <br/>
-                Send your username (<span className="username">{yourID}</span>) and wait for their call <span style={{fontWeight: 600}}>OR</span> enter their username and hit call!
+            <div  style={{color: "white"}}>
+                To call your friend, ask them to open Crypto meet in their browser. <br/>
+                Send your username (<span className="username" style={{color: "tomato"}}>{yourID}</span>) and wait for their call <span style={{fontWeight: 600}}>OR</span> enter their username and hit call!
             </div>
         </div>
     </div>
     </div>
+    
     </main>
     <Footer/>
   </>
@@ -116,16 +120,7 @@ function App() {
           config: {
     
             iceServers: [
-                // {
-                //     urls: "stun:numb.viagenie.ca",
-                //     username: "sultan1640@gmail.com",
-                //     credential: "98376683"
-                // },
-                // {
-                //     urls: "turn:numb.viagenie.ca",
-                //     username: "sultan1640@gmail.com",
-                //     credential: "98376683"
-                // }
+                
                 {url:'stun:stun01.sipphone.com'},
                 {url:'stun:stun.ekiga.net'},
                 {url:'stun:stun.fwdnet.net'},
@@ -403,6 +398,7 @@ function App() {
         </Rodal>
         {incomingCall}
       </div>
+     
       <div className="callContainer" style={{display: renderCall()}}>
         <Suspense fallback={<div>Loading...</div>}>
           <Watermark/>
@@ -421,6 +417,7 @@ function App() {
           {hangUp}
         </div>
       </div>
+      
     </>
   )
 }
