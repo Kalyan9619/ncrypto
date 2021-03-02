@@ -1,0 +1,2 @@
+(this.webpackJsonpclient=this.webpackJsonpclient||[]).push([[3],{129:function(e,a,t){},130:function(e,a,t){"use strict";t.r(a);var n=t(0),c=t.n(n),s=(t(61),t(129),t(62)),l=t.n(s);a.default=function(){return c.a.createElement("div",{className:"watermark"},c.a.createElement("img",{className:"logoImage",src:l.a,alt:"kalyan Logo"}),c.a.createElement("span",{className:"logoText"},"Crypto Meet"))}}}]);
+//# sourceMappingURL=3.cb46a39e.chunk.js.map
